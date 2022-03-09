@@ -229,6 +229,14 @@ button {
   max-width: 62.8%;
 }
 
+.d-none{
+  align-self: center !important;
+}
+
+.lsd{
+  align-self: center !important;
+}
+
 @media (max-width: 1500px) {
   .grid-full {
     -webkit-box-flex: 0;
@@ -3566,33 +3574,45 @@ button.li-btn:hover {
 
 .slick-active.animation-style-02 .slider-content > span {
   display: block;
-  -webkit-animation: 1200ms ease-in-out 0s normal none 1 running zoomInRight;
-          animation: 1200ms ease-in-out 0s normal none 1 running zoomInRight;
+  -webkit-animation: 1200ms ease-in-out 0s normal none 1 running
+ zoomInRight;
+          animation: 1200ms ease-in-out 0s normal none 1 running
+ zoomInRight;
 }
 
 .slick-active.animation-style-02 .slider-content > h2 {
-  -webkit-animation: 1400ms ease-in-out 0s normal none 1 running zoomInRight;
-          animation: 1400ms ease-in-out 0s normal none 1 running zoomInRight;
+  -webkit-animation: 1400ms ease-in-out 0s normal none 1 running
+ zoomInRight;
+          animation: 1400ms ease-in-out 0s normal none 1 running
+ zoomInRight;
 }
 
 .slick-active.animation-style-02 .slider-content > h3 {
-  -webkit-animation: 1600ms ease-in-out 0s normal none 1 running zoomInRight;
-          animation: 1600ms ease-in-out 0s normal none 1 running zoomInRight;
+  -webkit-animation: 1600ms ease-in-out 0s normal none 1 running
+ zoomInRight;
+          animation: 1600ms ease-in-out 0s normal none 1 running
+ zoomInRight;
 }
 
 .slick-active.animation-style-02 .slider-content > h4 {
-  -webkit-animation: 1600ms ease-in-out 0s normal none 1 running zoomInRight;
-          animation: 1600ms ease-in-out 0s normal none 1 running zoomInRight;
+  -webkit-animation: 1600ms ease-in-out 0s normal none 1 running
+ zoomInRight;
+          animation: 1600ms ease-in-out 0s normal none 1 running
+ zoomInRight;
 }
 
 .slick-active.animation-style-02 .slider-content > h5 {
-  -webkit-animation: 1800ms ease-in-out 0s normal none 1 running zoomInRight;
-          animation: 1800ms ease-in-out 0s normal none 1 running zoomInRight;
+  -webkit-animation: 1800ms ease-in-out 0s normal none 1 running
+ zoomInRight;
+          animation: 1800ms ease-in-out 0s normal none 1 running
+ zoomInRight;
 }
 
 .slick-active.animation-style-02 .slider-content > .slide-btn {
-  -webkit-animation: 2000ms ease-in-out 0s normal none 1 running zoomInRight;
-          animation: 2000ms ease-in-out 0s normal none 1 running zoomInRight;
+  -webkit-animation: 2000ms ease-in-out 0s normal none 1 running
+ zoomInRight;
+          animation: 2000ms ease-in-out 0s normal none 1 running
+ zoomInRight;
 }
 
 /*Top Up Keyframes*/
@@ -10497,7 +10517,8 @@ button.li-btn:hover {
 .DateCountdown .time_circles > div > span {
   color: #ffffff;
   display: block;
-  font-family: "Teko", sans-serif;
+  font-family: "Teko",
+ sans-serif;
   font-size: 60px !important;
   font-weight: 400;
   line-height: 47px !important;
