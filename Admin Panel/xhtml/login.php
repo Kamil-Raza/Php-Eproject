@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+if(isset($_SESSION['userid'])){
+	header("location:index.php");
+}else{
+
+
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" class="h-100">
 
@@ -22,14 +36,14 @@
                             <div class="col-xl-12">
                                 <div class="auth-form">
                                     <h4 class="text-center mb-4">Sign in your account</h4>
-                                    <form action="index.html">
+                                    <form action="auth/signin.php" method="POST">
                                         <div class="form-group">
-                                            <label class="mb-1"><strong>Email</strong></label>
-                                            <input type="email" class="form-control" value="hello@example.com">
+                                            <label class="mb-1"><strong>User Name</strong></label>
+                                            <input name="user_name" type="name" class="form-control" >
                                         </div>
                                         <div class="form-group">
                                             <label class="mb-1"><strong>Password</strong></label>
-                                            <input type="password" class="form-control" value="Password">
+                                            <input name="password" type="password" class="form-control" >
                                         </div>
                                         <div class="form-row d-flex justify-content-between mt-4 mb-2">
                                             <div class="form-group">
@@ -38,17 +52,13 @@
 													<label class="custom-control-label" for="basic_checkbox_1">Remember my preference</label>
 												</div>
                                             </div>
-                                            <div class="form-group">
-                                                <a href="page-forgot-password.html">Forgot Password?</a>
-                                            </div>
+                                            
                                         </div>
                                         <div class="text-center">
-                                            <button type="submit" class="btn btn-primary btn-block">Sign Me In</button>
+                                            <input type="submit" name="submit" class="btn btn-primary btn-block" value="Sign in">
                                         </div>
                                     </form>
-                                    <div class="new-account mt-3">
-                                        <p>Don't have an account? <a class="text-primary" href="./page-register.html">Sign up</a></p>
-                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -71,3 +81,7 @@
 </body>
 
 </html>
+<?php
+
+                }
+?>

@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+session_start();
+if(isset($_SESSION['userid'])){
+
+
+
+
+?>
+
 <?php  include("partials/header.php") ?>
 
 <div class="content-body">
@@ -218,4 +229,10 @@
             </div>
         </div>
 
-<?php  include("partials/footer.php") ?>
+<?php  include("partials/footer.php"); 
+}
+else{
+    header("location:login.php");
+}
+
+?>

@@ -39,7 +39,7 @@
             Nav header start
         ***********************************-->
         <div class="nav-header">
-            <a href="index.html" class="brand-logo">
+            <a href="./index.php" class="brand-logo">
                 <!-- <img class="logo-abbr" src="./assets/images/logo.png" alt=""> -->
                 <img class="logo-compact" src="./assets/images/logo2.png" alt="">
                 <img class="brand-title" src="./assets/images/logo2.png" alt="">
@@ -772,7 +772,7 @@
                             </li>
                             <li><a href="./categories.php" class="has-arrow" href="javascript:void()" aria-expanded="false">Categories</a>
                                 <ul aria-expanded="false">
-                                    <li><a href="#">All Categories</a></li>
+                                    <li><a href="./categories.php">All Categories</a></li>
                                 </ul>
                             </li>
 							<li><a href="page-review.html">Review</a></li>
@@ -786,6 +786,7 @@
 									<li><a href="./customers.php">Customers</a></li>
                                 </ul>
                             </li>
+							<li><a href="./logout.php">Logout</a></li>
                         </ul>
                     </li>
                     

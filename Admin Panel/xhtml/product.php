@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(isset($_SESSION['userid'])){
+
+
+
+
+?>
+
 <?php  include("partials/header.php") ?>
 
 <div class="content-body">
@@ -89,3 +98,11 @@
         </div>
 
 <?php  include("partials/footer.php") ?>
+<?php
+
+}
+else{
+    header("location:login.php");
+}
+
+?>
