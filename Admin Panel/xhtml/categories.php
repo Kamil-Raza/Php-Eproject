@@ -26,11 +26,11 @@ if(isset($_SESSION['userid'])){
          </strong>
         </div>
         <div class="panel-body">
-          <form method="post" action="categorie.php">
+          <form method="post" action="files/insert_category.php">
             <div class="form-group">
-                <input type="text" class="form-control" name="categorie-name" placeholder="Categorie Name">
+                <input type="name"name="categoryname"  class="form-control"  placeholder="Categorie Name">
             </div>
-            <button type="submit" name="add_cat" class="btn btn-primary">Add categorie</button>
+            <input type="submit" name="cat" class="btn btn-primary" value="add category">
         </form>
         </div>
       </div>
@@ -53,23 +53,28 @@ if(isset($_SESSION['userid'])){
                 </tr>
             </thead>
             <tbody>
+<?php include("config/db.php"); 
+
+$fetch = $con->query("SELECT * FROM `categories`");
+foreach($fetch as $row){
+?>
               
                 <tr>
-                    <td class="text-center"></td>
-                    <td></td>
+                    <td class="text-center"><?php echo $row['id'] ?></td>
+                    <td><?php echo $row['name'] ?></td>
                     <td class="text-center">
                       <div class="btn-group">
-                        <a href="edit_categorie.php?id="  class="btn btn-xs btn-warning" data-toggle="tooltip" title="Edit">
+                        <a href="edit_category.php?id=<?php echo $row['id'] ?>"  class="btn btn-xs btn-warning" data-toggle="tooltip" title="Edit">
                           <span class="glyphicon glyphicon-edit"></span>
                         </a>
-                        <a href="delete_categorie.php?id="  class="btn btn-xs btn-danger" data-toggle="tooltip" title="Remove">
+                        <a href="delete_category.php?id=<?php echo $row['id'] ?>"  class="btn btn-xs btn-danger" data-toggle="tooltip" title="Remove">
                           <span class="glyphicon glyphicon-trash"></span>
                         </a>
                       </div>
                     </td>
 
                 </tr>
-              
+<?php } ?>
             </tbody>
           </table>
        </div>
