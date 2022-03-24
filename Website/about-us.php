@@ -19,14 +19,14 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-7 d-flex align-items-center">
                         <div class="overview-content">
-                            <h2>Welcome To <span>Hiraola's</span> Store!</h2>
+                            <h2>Welcome To <span>The Sparkles</span> Store!</h2>
                             <p class="short_desc">We Provide Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                 Repudiandae nisi fuga facilis, consequuntur, maiores eveniet voluptatum, omnis possimus
                                 temporibus aspernatur nobis animi in exercitationem vitae nulla! Adipisci ullam illum quisquam.
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, nulla veniam? Magni aliquid
                                 asperiores magnam. Veniam ex tenetur.</p>
                             <div class="hiraola-about-us_btn-area">
-                                <a class="about-us_btn" href="shop-left-sidebar.html">Shop Now</a>
+                                <a class="about-us_btn" href="shop.php">Shop Now</a>
                             </div>
                         </div>
                     </div>

@@ -11,7 +11,7 @@ if(isset($_SESSION['userid'])){
 
 ?>
 <?php include("config/db.php"); 
-
+$products = $con->query("SELECT * FROM `products`");
 $categories = $con->query("SELECT * FROM `categories`");
 $media = $con->query("SELECT * FROM `media`");
 
@@ -35,26 +35,28 @@ $media = $con->query("SELECT * FROM `media`");
             <span>Add New Product</span>
          </strong>
         </div>
+        <?php foreach($products as $prod){ ?>
         <div class="panel-body">
          <div class="col-md-12">
-          <form method="post" action="files/insert_product.php" class="clearfix" enctype="multipart/form-data" >
+          <form method="post" action="files/update_product.php?id=<?php echo $prod['id'] ?>" class="clearfix" enctype="multipart/form-data" >
+          
               <div class="form-group">
                 <div class="input-group">
                   <span class="input-group-addon">
                    <i class="glyphicon glyphicon-th-large"></i>
                   </span>
-                  <input type="text" class="form-control" name="productname" placeholder="Product Title">
+                  <input type="text" class="form-control" name="productname" placeholder="Product Title" value="<?php echo $prod['productname'] ?>">
                </div>
               </div>
               <div class="form-group">
                 <div class="row">
                   <div class="col-md-6">
                     <select class="form-control" name="categoryid">
-                      <option value="">Select Product Category</option>
-                      <?php  foreach ($categories as $cat): ?>
-                      <option value="<?php echo (int)$cat['id'] ?>">
-                        <?php echo $cat['name'] ?></option>
-                    <?php endforeach; ?>
+                    <option value=""> Select a categorie</option>
+                   <?php  foreach ($categories as $cat): ?>
+                     <option value="<?php echo (int)$cat['id']; ?>" <?php if($prod['categoryid'] === $cat['id']): echo "selected"; endif; ?> >
+                       <?php echo ($cat['name']); ?></option>
+                   <?php endforeach; ?>
                     </select>
                   </div>
                   <div class="col-md-6">
@@ -70,7 +72,7 @@ $media = $con->query("SELECT * FROM `media`");
                      <span class="input-group-addon">
                       <i class="glyphicon glyphicon-shopping-cart"></i>
                      </span>
-                     <input type="number" class="form-control" name="productquantity" placeholder="Product Quantity">
+                     <input type="number" class="form-control" name="productquantity"  value="<?php echo $prod['quantity'] ?>">
                   </div>
                  </div>
                  <div class="col-md-4">
@@ -78,7 +80,7 @@ $media = $con->query("SELECT * FROM `media`");
                      <span class="input-group-addon">
                        <i class="glyphicon glyphicon-usd"></i>
                      </span>
-                     <input type="number" class="form-control" name="buyingprice" placeholder="Buying Price">
+                     <input type="number" class="form-control" name="buyingprice" value="<?php echo $prod['buyingprice'] ?>">
                      <span class="input-group-addon">.00</span>
                   </div>
                  </div>
@@ -87,13 +89,14 @@ $media = $con->query("SELECT * FROM `media`");
                       <span class="input-group-addon">
                         <i class="glyphicon glyphicon-usd"></i>
                       </span>
-                      <input type="number" class="form-control" name="sellingprice" placeholder="Selling Price">
+                      <input type="number" class="form-control" name="sellingprice" value="<?php echo $prod['sellingprice'] ?>">
                       <span class="input-group-addon">.00</span>
                    </div>
                   </div>
                </div>
               </div>
-              <input type="submit" name="add_product" class="btn btn-primary btn-rounded" value="Add Product">
+              <?php } ?>
+              <input type="submit" name="edit_prod" class="btn btn-primary btn-rounded" value="Add Product">
           </form>
          </div>
         </div>

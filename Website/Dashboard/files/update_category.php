@@ -10,7 +10,12 @@ if(isset($_POST['edit_cat'])){
 
 
 
-    $categoryname = $_POST['categoryname'];
+  $productname = $_POST['productname'];
+  $categoryid = $_POST['categoryid'];
+  $mediaid = $_POST['mediaid'];
+  $productquantity = $_POST['productquantity'];
+  $buyingprice = $_POST['buyingprice'];
+  $sellingprice = $_POST['sellingprice'];
     
 
     $insert = $con->query("UPDATE `categories` SET `name`='$categoryname' WHERE `id`='$id' ");

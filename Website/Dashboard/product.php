@@ -39,15 +39,21 @@ if(isset($_SESSION['userid'])){
 											</div>
 										</th>
 										<th>ID</th>
-										<th>Date Join</th>
-										<th>Doctor Name</th>
-										<th>Specialist</th>
-										<th>Schedule</th>
-										<th>Contact</th>
+										<th>Product Name</th>
+										<th>Category</th>
+										<th>Quantity</th>
+										<th>Buying Price</th>
+										<th>Selling Price</th>
 										<th>Status</th>
 									</tr>
 								</thead>
 								<tbody>
+<?php 
+include("config/db.php"); 
+
+$products = $con->query("SELECT * FROM `products`");
+foreach($products as $prod){
+?>
 									<tr>
 										<td>
 											<div class="d-flex align-items-center">
@@ -57,17 +63,19 @@ if(isset($_SESSION['userid'])){
 														<label class="custom-control-label" for="customCheckBox2"></label>
 													</div>
 												</div>
-												<img alt="" src="images/doctors/9.jpg" height="43" width="43" class="rounded-circle ml-4">
+												
+												<img alt="" src="uploads/<?php  echo $prod['mediaid'] ?>" height="43" width="43" class="rounded-circle ml-4">
+												
 											</div>
 										</td>
-										<td>#P-00012</td>
-										<td>26/02/2020, 12:42 AM</td>
-										<td>Dr. Samantha</td>
-										<td>Dentist</td>
-										<td>
-											<a href="#" class="btn btn-primary light btn-rounded btn-sm text-nowrap" >5 Appointment</a>
-										</td>
-										<td><span class="font-w500">+12 4124 5125</span></td>
+										<td><?php echo $prod['id'] ?></td>
+										<td><?php echo $prod['productname'] ?></td>
+										
+										<td><?php echo $prod['categoryid'] ?></td>
+										
+										<td><?php echo $prod['quantity'] ?></td>
+										<td><?php echo $prod['buyingprice'] ?></td>
+										<td><span class="font-w500"><?php echo $prod['sellingprice'] ?></span></td>
 										<td>
 											<div class="d-flex align-items-center">
 												<span class="text-light font-w600">Unavailable</span>
@@ -80,15 +88,14 @@ if(isset($_SESSION['userid'])){
 														</svg>
 													</div>
 													<div class="dropdown-menu dropdown-menu-right">
-														<a class="dropdown-item" href="#">View Detail</a>
-														<a class="dropdown-item" href="#">Edit</a>
-														<a class="dropdown-item" href="#">Delete</a>
+														<a class="dropdown-item" href="edit_product.php?id=<?php echo $prod['id'] ?>">Edit</a>
+														<a class="dropdown-item" href="delete_product.php?id=<?php echo $prod['id'] ?>">Delete</a>
 													</div>
 												</div>
 											</div>
 										</td>
 									</tr>
-									
+<?php } ?>	
 								</tbody>
 							</table>
 						</div>

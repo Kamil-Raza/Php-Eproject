@@ -9,7 +9,12 @@ if(isset($_SESSION['userid'])){
 ?>
 
 <?php  include("partials/header.php") ?>
+<?php 
+include("config/db.php"); 
 
+$products = $con->query("SELECT * FROM `products`");
+foreach($products as $prod){
+?>
 <div class="content-body">
             <div class="container-fluid">
                 <div class="page-titles">
@@ -24,10 +29,10 @@ if(isset($_SESSION['userid'])){
                             <div class="card-body">
                                 <div class="new-arrival-product">
                                     <div class="new-arrivals-img-contnent">
-                                        <a href="ecom-product-detail.html"><img class="img-fluid" src="images/product/1.jpg" alt=""></a>
+                                        <a href="ecom-product-detail.html"><img class="img-fluid" src="uploads/<?php  echo $prod['mediaid'] ?>" alt=""></a>
                                     </div>
                                     <div class="new-arrival-content text-center mt-3">
-                                        <h4><a href="ecom-product-detail.html" class="text-black">Bonorum Et Malorum</a></h4>
+                                        <h4><a href="ecom-product-detail.html" class="text-black"><?php echo $prod['productname'] ?></a></h4>
                                         <ul class="star-rating">
                                             <li><i class="fa fa-star"></i></li>
                                             <li><i class="fa fa-star"></i></li>
@@ -35,170 +40,14 @@ if(isset($_SESSION['userid'])){
                                             <li><i class="fa fa-star-half-empty"></i></li>
                                             <li><i class="fa fa-star-half-empty"></i></li>
                                         </ul>
-                                        <span class="price">$761.00</span>
+                                        <span class="price"><?php echo $prod['sellingprice'] ?></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="new-arrival-product">
-                                    <div class="new-arrivals-img-contnent">
-                                        <a href="ecom-product-detail.html"><img class="img-fluid" src="images/product/2.jpg" alt=""></a>
-                                    </div>
-                                    <div class="new-arrival-content text-center mt-3">
-                                        <h4><a href="ecom-product-detail.html" class="text-black">Striped Dress</a></h4>
-                                        <ul class="star-rating">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                        <span class="price">$159.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="new-arrival-product">
-                                    <div class="new-arrivals-img-contnent">
-                                        <a href="ecom-product-detail.html"><img class="img-fluid" src="images/product/3.jpg" alt=""></a>
-                                    </div>
-                                    <div class="new-arrival-content text-center mt-3">
-                                        <h4><a href="ecom-product-detail.html" class="text-black">BBow polka-dot</a></h4>
-                                        <ul class="star-rating">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                        <span class="price">$357.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="new-arrival-product">
-                                    <div class="new-arrivals-img-contnent">
-                                        <a href="ecom-product-detail.html"><img class="img-fluid" src="images/product/4.jpg" alt=""></a>
-                                    </div>
-                                    <div class="new-arrival-content text-center mt-3">
-                                        <h4><a href="ecom-product-detail.html" class="text-black">Z Product 360</a></h4>
-                                        <ul class="star-rating">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star-half-empty"></i></li>
-                                            <li><i class="fa fa-star-half-empty"></i></li>
-                                        </ul>
-                                        <span class="price">$654.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="new-arrival-product">
-                                    <div class="new-arrivals-img-contnent">
-                                        <a href="ecom-product-detail.html"><img class="img-fluid" src="images/product/5.jpg" alt=""></a>
-                                    </div>
-                                    <div class="new-arrival-content text-center mt-3">
-                                        <h4><a href="ecom-product-detail.html" class="text-black">Chair Grey</a></h4>
-                                        <ul class="star-rating">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                        <span class="price">$369.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="new-arrival-product">
-                                    <div class="new-arrivals-img-contnent">
-                                        <a href="ecom-product-detail.html"><img class="img-fluid" src="images/product/6.jpg" alt=""></a>
-                                    </div>
-                                    <div class="new-arrival-content text-center mt-3">
-                                        <h4><a href="ecom-product-detail.html" class="text-black">fox sake withe</a></h4>
-                                        <ul class="star-rating">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                        <span class="price">$245.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="new-arrival-product">
-                                    <div class="new-arrivals-img-contnent">
-                                        <a href="ecom-product-detail.html"><img class="img-fluid" src="images/product/7.jpg" alt=""></a>
-                                    </div>
-                                    <div class="new-arrival-content text-center mt-3">
-                                        <h4><a href="ecom-product-detail.html" class="text-black">Back Bag</a></h4>
-                                        <ul class="star-rating">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                        <span class="price">$364.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="new-arrival-product">
-                                    <div class="new-arrivals-img-contnent">
-                                        <a href="ecom-product-detail.html"><img class="img-fluid" src="images/product/1.jpg" alt=""></a>
-                                    </div>
-                                    <div class="new-arrival-content text-center mt-3">
-                                        <h4><a href="ecom-product-detail.html" class="text-black">FLARE DRESS</a></h4>
-                                        <ul class="star-rating">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star-half-empty"></i></li>
-                                            <li><i class="fa fa-star-half-empty"></i></li>
-                                        </ul>
-                                        <span class="price">$548.00</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+                    
+ <?php } ?>
 <?php  include("partials/footer.php") ?>
 <?php
 

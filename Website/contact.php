@@ -17,8 +17,7 @@
         <!-- Begin Contact Main Page Area -->
         <div class="contact-main-page">
             <div class="container">
-                <div id="google-map"></div>
-            </div>
+               
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 offset-lg-1 col-md-12 order-1 order-lg-2">
@@ -65,7 +64,7 @@
                                         <textarea name="message"></textarea>
                                     </div>
                                     <div class="form-group">
-                                        <input type="submit" value="send" id="submit" class="hiraola-contact-form_btn" name="submit">
+                                        <input type="submit" name="submit" value="send" id="submit" class="hiraola-contact-form_btn" >
 
                                     </div>
                                 </form>

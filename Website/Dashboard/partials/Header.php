@@ -114,7 +114,7 @@
                                     <li><a href="./categories.php">All Categories</a></li>
                                 </ul>
                             </li>
-							<li><a href="page-review.html">Review</a></li>
+							<li><a href="customers.php">Review</a></li>
                     
 							<li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Shop</a>
                                 <ul aria-expanded="false">
