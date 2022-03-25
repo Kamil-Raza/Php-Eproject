@@ -557,7 +557,7 @@ foreach($products as $prod){
                             <div id="necklaces" class="tab-pane active show" role="tabpanel">
                                 <div class="hiraola-product-tab_slider-2">
                                     <!-- Begin Hiraola's Slide Item Area -->
-                                    <div class="slide-item">
+                                    <!-- <div class="slide-item">
                                         <div class="single_product">
                                             <div class="product-img">
                                                 <a href="single-product.html">
@@ -600,7 +600,7 @@ foreach($products as $prod){
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- Hiraola's Slide Item Area End Here -->
 
                                     <!-- Begin Hiraola's Slide Item Area -->
@@ -611,7 +611,6 @@ foreach($products as $prod){
                                                     <img class="primary-img" src="dashboard/uploads/<?php  echo $prod['mediaid'] ?>" alt="Hiraola's Product Image">
                                                     <img class="secondary-img" src="dashboard/uploads/<?php  echo $prod['mediaid'] ?>" alt="Hiraola's Product Image">
                                                 </a>
-                                                <span class="sticker-2">Sale</span>
                                                 <div class="add-actions">
                                                     <ul>
                                                         <li><a class="hiraola-add_cart" href="cart.html" data-bs-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="ion-bag"></i></a>

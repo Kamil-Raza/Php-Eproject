@@ -28,16 +28,16 @@
                                 claram anteposuerit litterarum formas human.</p>
                             <div class="single-contact-block">
                                 <h4><i class="fa fa-fax"></i> Address</h4>
-                                <p>123 Main Street, Anytown, CA 12345 – USA</p>
+                                <p>Tariq Road, Karachi, Pakistan</p>
                             </div>
                             <div class="single-contact-block">
                                 <h4><i class="fa fa-phone"></i> Phone</h4>
-                                <p>Mobile: (08) 123 456 789</p>
-                                <p>Hotline: 1009 678 456</p>
+                                <p>Mobile: (=92) 333 7890874</p>
+                        
                             </div>
                             <div class="single-contact-block last-child">
                                 <h4><i class="fa fa-envelope-o"></i> Email</h4>
-                                <p>yourmail@domain.com</p>
+                                <p>info@sparkles.com</p>
                                 
                             </div>
                         </div>

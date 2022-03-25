@@ -13,8 +13,7 @@
                                 </div>
 
                                 <div class="widget-short_desc">
-                                    <p>We are a team of designers and developers that create high quality HTML Template &
-                                        Woocommerce, Shopify Theme.
+                                    <p>This is our E-Project.
                                     </p>
                                 </div>
                                 <div class="hiraola-social_link">
@@ -63,15 +62,13 @@
                                             <div class="widgets-essential_stuff">
                                                 <ul>
                                                     <li class="hiraola-address"><i
-                                                    class="ion-ios-location"></i><span>Address:</span> The Barn,
-                                                        Ullenhall, Henley
-                                                        in
-                                                        Arden B578 5CC, England</li>
+                                                    class="ion-ios-location"></i><span>Address:</span> Tariq Road
+                                                        Karachi, Pakistan</li>
                                                     <li class="hiraola-phone"><i class="ion-ios-telephone"></i><span>Call
-                                                    Us:</span> <a href="tel://+123123321345">+123 321 345</a>
+                                                    Us:</span> <a href="tel://+123123321345">+92 333 7890874</a>
                                                     </li>
                                                     <li class="hiraola-email"><i
-                                                    class="ion-android-mail"></i><span>Email:</span> <a href="mailto://info@yourdomain.com">info@yourdomain.com</a></li>
+                                                    class="ion-android-mail"></i><span>Email:</span> <a href="mailto://info@sparkles.com">info@sparkles.com</a></li>
                                                 </ul>
                                             </div>
                                         </div>
